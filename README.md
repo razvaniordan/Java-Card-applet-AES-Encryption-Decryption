@@ -1,10 +1,11 @@
-# 🔐 Java Card Applet – AES Encryption & Decryption
+# Java Card Applet – AES Encryption & Decryption
 
-This project is a Java Card applet named **`ProjectAES`** that securely encrypts and decrypts files (e.g., PDFs, DOCs) using **AES-128 ECB encryption**. It is designed to run inside the **Java Card Development Kit Simulator** provided by Oracle.
+This project is a Java Card applet named **`ProjectAES`** that securely encrypts and decrypts files (e.g., PDFs, DOCs) using **AES-128 ECB encryption**. It is designed to run inside the **Java Card Development Kit Simulator** provided by Oracle.  
 
----
+---  
 
-## ✨ Features
+  <br><br>
+## Features
 
 - Verifies user PIN before encryption/decryption
 - Encrypts and decrypts binary file contents block-by-block (16 bytes)
@@ -14,7 +15,9 @@ This project is a Java Card applet named **`ProjectAES`** that securely encrypts
 
 ---
 
-## 📁 Project Structure
+<br><br>
+  
+## Project Structure
 ```bash
 ProjectAES/
 ├── applet/
@@ -33,7 +36,9 @@ ProjectAES/
 
 ---
 
-## 📦 Requirements
+<br><br>
+
+## Requirements
 
 | Tool / Component | Version | Source |
 |------------------|---------|--------|
@@ -42,7 +47,10 @@ ProjectAES/
 | Java Card Development Kit Tools | 24.1 | [Oracle Download](https://www.oracle.com/java/technologies/javacard-downloads.html#sdk-tools) |
 | Linux OS / WSL / Cloud Shell | Recommended | Tested on Google Cloud Shell |
 
-## 🚀 Running the Project with Java Card Simulator
+
+<br><br>
+
+## Running the Project with Java Card Simulator
 
 This application requires **two terminals**: one for running the **simulator** and one for the **Java host client**.
 
@@ -74,7 +82,9 @@ A000000151000000_scp03mac_10=222222222222222222222222222222222222222222222222222
 A000000151000000_scp03dek_10=3333333333333333333333333333333333333333333333333333333333333333
 ```
 
-### 🖥️ Terminal 1 — Start the Java Card Simulator (Smart Card Server)
+<br><br>
+
+### Terminal 1 — Start the Java Card Simulator (Smart Card Server)
 
 This step simulates the actual smart card that hosts the AES applet.
 
@@ -103,7 +113,7 @@ java -cp . -jar tools/Configurator.jar \
 Leave this terminal open while interacting from the host application
 
 
-### 🖥️ Terminal 2 — Run the Java Host (Off-card Client)
+### Terminal 2 — Run the Java Host (Off-card Client)
 
 This step deploys the applet, communicates with it, and performs file encryption/decryption.
 
@@ -121,7 +131,9 @@ cd $JC_HOME_SIMULATOR/samples/ProjectAES
 ./run.sh
 ```
 
-## 🔐 What Happens
+<br><br>
+
+## What Happens
 
 - Installs the Java Card applet with a fixed PIN (`01 02 03 04 05`)
 - Selects and verifies the applet
@@ -131,18 +143,14 @@ cd $JC_HOME_SIMULATOR/samples/ProjectAES
 
 ---
 
-## 🧪 Supported File Types
+<br><br>
+
+## Supported File Types
 
 The applet operates on raw bytes, meaning it can handle **any binary file format** as long as the data is transmitted in 16-byte blocks:
 
-- ✅ `.txt`, `.pdf`, `.docx`, `.png`, `.zip`, etc.
-- ⚠️ Padding and unpadding are managed on the host side using **PKCS#7-style padding** (already implemented in this project)
+- `.txt`, `.pdf`, `.docx`, `.png`, `.zip`, etc.
+- Padding and unpadding are managed on the host side using **PKCS#7-style padding** (already implemented in this project)
 
 
 ---
-
-## 📄 License
-
-This project is for **educational use and demonstration purposes only**.  
-Licensed under the [MIT License](LICENSE).
-
