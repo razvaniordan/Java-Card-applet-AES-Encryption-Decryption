@@ -4,7 +4,7 @@ This project is a Java Card applet named **`ProjectAES`** that securely encrypts
 
 ---  
 
-  <br><br>
+  
 ## Features
 
 - Verifies user PIN before encryption/decryption
@@ -15,8 +15,7 @@ This project is a Java Card applet named **`ProjectAES`** that securely encrypts
 
 ---
 
-<br><br>
-  
+
 ## Project Structure
 ```bash
 ProjectAES/
@@ -36,7 +35,6 @@ ProjectAES/
 
 ---
 
-<br><br>
 
 ## Requirements
 
@@ -47,14 +45,12 @@ ProjectAES/
 | Java Card Development Kit Tools | 24.1 | [Oracle Download](https://www.oracle.com/java/technologies/javacard-downloads.html#sdk-tools) |
 | Linux OS / WSL / Cloud Shell | Recommended | Tested on Google Cloud Shell |
 
-
-<br><br>
+---
 
 ## Running the Project with Java Card Simulator
 
 This application requires **two terminals**: one for running the **simulator** and one for the **Java host client**.
 
----
 
 Make sure the following environment variables are **correctly set** in each terminal:
 
@@ -130,8 +126,7 @@ cd $JC_HOME_SIMULATOR/samples/ProjectAES
 # Run the application
 ./run.sh
 ```
-
-<br><br>
+---
 
 ## What Happens
 
@@ -143,7 +138,6 @@ cd $JC_HOME_SIMULATOR/samples/ProjectAES
 
 ---
 
-<br><br>
 
 ## Supported File Types
 
